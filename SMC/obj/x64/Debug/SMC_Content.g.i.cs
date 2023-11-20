@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("deepwise.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ui/radiobuttonnoicon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ui/radiobuttonyesicon.png")]
 
 

@@ -11,7 +11,7 @@
         Title="StepperMotorControl" Height="700" Width="1000" Background="#FF3E6FB3" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
         <Image x:Name="DW_Logo" HorizontalAlignment="Left" Height="141" Margin="814,513,0,0" VerticalAlignment="Top" Width="159" Source="Icon/DeepWise.png"/>
-        <TabControl x:Name="Log" HorizontalAlignment="Left" Height="172" Margin="5,490,0,0" VerticalAlignment="Top" Width="790">
+        <TabControl x:Name="Log" HorizontalAlignment="Left" Height="172" Margin="5,485,0,0" VerticalAlignment="Top" Width="790" Background="#FFE6F0FF">
             <TabControl.Resources>
                 <Style TargetType="RichTextBox">
                     <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
@@ -24,21 +24,21 @@
                     <Setter Property="FontSize" Value="16" />
                 </Style>
             </TabControl.Resources>
-            <TabItem Header="一般" Background="#FFE6F0FF">
+            <TabItem Header="一般" Style="{StaticResource BaseTabcontrol}">
                 <RichTextBox x:Name="richTextBoxGeneral" Background="#FF43B5BF"/>
             </TabItem>
-            <TabItem Header="警告" Background="#FFE6F0FF">
+            <TabItem Header="警告" Style="{StaticResource BaseTabcontrol}">
                 <RichTextBox x:Name="richTextBoxWarning" Background="#FF43AABF"/>
             </TabItem>
-            <TabItem Header="錯誤" Background="#FFE6F0FF">
+            <TabItem Header="錯誤" Style="{StaticResource BaseTabcontrol}">
                 <RichTextBox x:Name="richTextBoxError" Background="#FF43A0BF"/>
             </TabItem>
-            <TabItem Header="除錯" Background="#FFE6F0FF">
+            <TabItem Header="除錯" Style="{StaticResource BaseTabcontrol}">
                 <RichTextBox x:Name="richTextBoxDebug" Background="#FF4396BF"/>
             </TabItem>
         </TabControl>
-        <TabControl HorizontalAlignment="Left" Margin="5,8,0,0" VerticalAlignment="Top" Height="478" Width="978" Background="#FFE6F0FF">
-            <TabItem Header="主畫面" Background="#FFE6F0FF">
+        <TabControl HorizontalAlignment="Left" Margin="5,3,0,0" VerticalAlignment="Top" Height="478" Width="978" Background="#FFE6F0FF">
+            <TabItem Header="主畫面" Background="#FFE6F0FF" Style="{StaticResource BaseTabcontrol}">
                 <Grid>
                     <Image x:Name="Motor" HorizontalAlignment="Left" Height="374" Margin="31,0,0,0" VerticalAlignment="Center" Width="371" Source="Icon/Motor.png"/>
                     <WrapPanel Orientation="Horizontal" Margin="778,47,19,48">

@@ -148,7 +148,6 @@ D:\Chimingkuei\repos\SMC\SMC\bin\x64\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 D:\Chimingkuei\repos\SMC\SMC\bin\x64\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 D:\Chimingkuei\repos\SMC\SMC\bin\x64\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\SMC.csproj.AssemblyReference.cache
-D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\ButtonStyles.baml
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\CheckBoxStyles.baml
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\ComboBoxStyles.baml
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\TextBoxStyles.baml
@@ -168,3 +167,8 @@ D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\SMC.csproj.CoreCompileInputs.cache
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\SMC.csproj.CopyComplete
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\SMC.exe
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\SMC.pdb
+D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\GroupBoxStyles.baml
+D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\RadioButtonStyles.baml
+D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\SliderStyles.baml
+D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\TabControlStyles.baml
+D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\ButtonStyles.baml
