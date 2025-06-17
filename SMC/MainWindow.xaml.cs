@@ -143,7 +143,7 @@ namespace SMC
                             }
                             catch
                             {
-                                MessageBox.Show("連線失敗，請檢查線路或Com port正確性!", "確認", MessageBoxButton.OK, MessageBoxImage.Warning);
+                                MessageBox.Show("連線失敗，請檢查線路、Com port或BaudRate=115200正確性!", "確認", MessageBoxButton.OK, MessageBoxImage.Warning);
                                 Logger.WriteLog("連線失敗!", 1, richTextBoxGeneral);
                             }
                         }
