@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:controls="clr-namespace:SMC;assembly=SMC"
         xmlns:local="clr-namespace:SMC"
         mc:Ignorable="d"
         Closing="Window_Closing" 
@@ -40,23 +41,25 @@
         <TabControl HorizontalAlignment="Left" Margin="5,3,0,0" VerticalAlignment="Top" Height="478" Width="978" Background="#FFE6F0FF">
             <TabItem Header="主畫面" Background="#FFE6F0FF" Style="{StaticResource BaseTabcontrol}">
                 <Grid>
-                    <Image x:Name="Motor" HorizontalAlignment="Left" Height="374" Margin="31,0,0,0" VerticalAlignment="Center" Width="371" Source="Icon/Motor.png"/>
-                    <WrapPanel Orientation="Horizontal" Margin="778,47,19,48">
-                        <Label x:Name="Rotational_Speed_Label" Content="ms/2rev" Width="120" Height="40" FontSize="20" Margin="30,40,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                    <Image x:Name="Motor" HorizontalAlignment="Left" Height="326" Margin="13,0,0,0" VerticalAlignment="Center" Width="330" Source="Icon/Motor.png"/>
+                    <WrapPanel Orientation="Horizontal" Margin="647,91,17,65">
+                        <Label x:Name="Port_Label" Content="Port" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="40" FontSize="20" Margin="20,40,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                        <TextBox x:Name="Port" HorizontalAlignment="Left" Margin="25,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="37" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                        <Label x:Name="Rotational_Speed_Label" Content="ms/2rev" Width="100" Height="40" FontSize="20" Margin="20,40,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                         <xctk:IntegerUpDown x:Name="Rotational_Speed" Increment="1" TextAlignment="Center" FontSize="20" Width="130" Height="40" Margin="25,40,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                        <Label x:Name="Pluse_Label" Content="pluse/rev" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="40" FontSize="20" Margin="30,40,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                        <Label x:Name="Pluse_Label" Content="pluse/rev" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="40" FontSize="20" Margin="20,40,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                         <ComboBox x:Name="Pluse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="40" FontSize="20" Margin="25,40,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                             <ComboBoxItem IsSelected="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">200</ComboBoxItem>
                             <ComboBoxItem HorizontalContentAlignment="Center" VerticalContentAlignment="Center">1600</ComboBoxItem>
                             <ComboBoxItem HorizontalContentAlignment="Center" VerticalContentAlignment="Center">3200</ComboBoxItem>
                         </ComboBox>
                     </WrapPanel>
-                    <WrapPanel Orientation="Horizontal" Margin="418,66,213,63">
+                    <WrapPanel Orientation="Horizontal" Margin="338,73,296,56">
                         <Button x:Name="Connect" Style="{StaticResource CircleButton}" Click="Main_Btn_Click" FontSize="20" Width="100" Height="100" Margin="35,40,0,0">Connect</Button>
-                        <local:LED x:Name="Connect_Led" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,70,0,0"/>
-                        <Button x:Name="Save_Config" Style="{StaticResource CircleButton}" Click="Main_Btn_Click" FontSize="20" Width="100" Height="100" Margin="30,40,0,0">Config</Button>
+                        <local:IndicatorLight x:Name="Connect_Led" LightColor="LightGray" Width="32" Height="32" Margin="5,50,30,0"/>
+                        <Button x:Name="Save_Config" Style="{StaticResource CircleButton}" Click="Main_Btn_Click" FontSize="20" Width="100" Height="100" Margin="0,40,0,0">Config</Button>
                         <Button x:Name="Rotate" Style="{StaticResource CircleButton}" Click="Main_Btn_Click" FontSize="20" Width="100" Height="100" Margin="35,40,0,0">Rotate</Button>
-                        <local:LED x:Name="Rotate_Led" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,70,0,0"/>
+                        <local:IndicatorLight x:Name="Rotate_Led" LightColor="LightGray" Width="32" Height="32" Margin="5,50,0,0"/>
                         <Button x:Name="Stop" Style="{StaticResource CircleButton}" Click="Main_Btn_Click" FontSize="20" Width="100" Height="100" Margin="30,40,0,0">Stop</Button>
                     </WrapPanel>
                 </Grid>

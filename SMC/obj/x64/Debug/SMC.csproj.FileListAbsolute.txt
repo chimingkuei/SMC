@@ -151,20 +151,17 @@ D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\SMC.csproj.AssemblyReference.cache
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\CheckBoxStyles.baml
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\ComboBoxStyles.baml
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\TextBoxStyles.baml
-D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\LED.g.cs
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\MainWindow.g.cs
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\App.g.cs
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\SMC_MarkupCompile.cache
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\SMC_MarkupCompile.lref
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\App.baml
-D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\LED.baml
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\MainWindow.baml
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\SMC.g.resources
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\SMC.Properties.Resources.resources
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\SMC.csproj.GenerateResource.cache
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\SMC.csproj.CoreCompileInputs.cache
-D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\SMC.csproj.CopyComplete
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\SMC.exe
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\SMC.pdb
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\GroupBoxStyles.baml
@@ -172,3 +169,6 @@ D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\RadioButtonStyles.baml
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\SliderStyles.baml
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\TabControlStyles.baml
 D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\UI\ButtonStyles.baml
+D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\SMC.csproj.Up2Date
+D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\IndicatorLight.g.cs
+D:\Chimingkuei\repos\SMC\SMC\obj\x64\Debug\IndicatorLight.baml

@@ -22,6 +22,7 @@ namespace SMC
 {
     public class Parameter
     {
+        public string Port_val { get; set; }
         public string Pluse_val { get; set; }
         public string Rotational_Speed_val { get; set; }
     }
@@ -77,8 +78,8 @@ namespace SMC
                     {
                         this.Dispatcher.Invoke(() =>
                         {
-                            Connect_Led.DIO_LED = 2;
-                            Rotate_Led.DIO_LED = 2;
+                            Connect_Led.LightColor = System.Windows.Media.Color.FromRgb(0, 255, 0);
+                            Rotate_Led.LightColor = System.Windows.Media.Color.FromRgb(0, 255, 0);
                         });
 
                     }
@@ -92,6 +93,7 @@ namespace SMC
             List<Parameter> Parameter_info = Config.Load();
             Pluse.Text = Parameter_info[0].Pluse_val;
             Rotational_Speed.Text = Parameter_info[0].Rotational_Speed_val;
+            Port.Text = Parameter_info[0].Port_val;
         }
 
         private void SaveConfig()
@@ -99,7 +101,8 @@ namespace SMC
             List<Parameter> Parameter_config = new List<Parameter>()
                         {
                             new Parameter() {Pluse_val=Pluse.Text,
-                                             Rotational_Speed_val=Rotational_Speed.Text
+                                             Rotational_Speed_val=Rotational_Speed.Text,
+                                             Port_val = Port.Text
                                              }
                         };
             Config.Save(Parameter_config);
@@ -126,20 +129,27 @@ namespace SMC
             {
                 case nameof(Connect):
                     {
-                        sp.PortName = "COM5";
-                        sp.BaudRate = 115200;
-                        try
+                        if (!string.IsNullOrEmpty(Port.Text))
                         {
-                            sp.Open();
-                            Connect_Led.DIO_LED = 0;
-                            Button_Init(true);
-                            Logger.WriteLog("連線成功!", 1, richTextBoxGeneral);
-                            CheckConnect();
+                            sp.PortName = Port.Text;
+                            sp.BaudRate = 115200;
+                            try
+                            {
+                                sp.Open();
+                                Connect_Led.LightColor = System.Windows.Media.Color.FromRgb(0, 255, 0);
+                                Button_Init(true);
+                                Logger.WriteLog("連線成功!", 1, richTextBoxGeneral);
+                                CheckConnect();
+                            }
+                            catch
+                            {
+                                MessageBox.Show("連線失敗，請檢查線路或Com port正確性!", "確認", MessageBoxButton.OK, MessageBoxImage.Warning);
+                                Logger.WriteLog("連線失敗!", 1, richTextBoxGeneral);
+                            }
                         }
-                        catch
+                        else
                         {
-                            MessageBox.Show("連線失敗，請檢查線路或Com port正確性!", "確認", MessageBoxButton.OK, MessageBoxImage.Warning);
-                            Logger.WriteLog("連線失敗!", 1, richTextBoxGeneral);
+                            MessageBox.Show("請輸入Com port!", "確認", MessageBoxButton.OK, MessageBoxImage.Warning);
                         }
                         break;
                     }
@@ -149,14 +159,14 @@ namespace SMC
                         sp.WriteLine(Pluse.Text);
                         sp.Write(Rotational_Speed.Text);
                         sp.Write(Rotational_Speed.Text);
-                        Rotate_Led.DIO_LED = 0;
+                        Rotate_Led.LightColor = System.Windows.Media.Color.FromRgb(0, 255, 0);
                         Logger.WriteLog("開始轉動!", 1, richTextBoxGeneral);
                         break;
                     }
                 case nameof(Stop):
                     {
                         sp.WriteLine("0");
-                        Rotate_Led.DIO_LED = 2;
+                        Rotate_Led.LightColor = System.Windows.Media.Color.FromRgb(255, 0, 0);
                         Logger.WriteLog("停止轉動!", 1, richTextBoxGeneral);
                         break;
                     }
