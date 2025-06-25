@@ -2,7 +2,7 @@ const int dirPin = 2;
 const int stepPin = 5; 
 const int enPin = 8;
 char pulse[9];
-char Rotating_speed[9];
+char delaytime[9];
 
 void setup() {
   Serial.begin(115200);
@@ -28,8 +28,8 @@ void loop() {
         }
         while(true)
         {
-          Serial.readBytes(Rotating_speed,9);
-          if(atoi(Rotating_speed)>0)
+          Serial.readBytes(delaytime,9);
+          if(atoi(delaytime)>0)
           {
             break;
           }
@@ -39,15 +39,15 @@ void loop() {
         {
           for(int x = 0; x < atoi(pulse); x++) {
             digitalWrite(stepPin,HIGH); 
-            delayMicroseconds(atoi(Rotating_speed)); 
+            delayMicroseconds(atoi(delaytime)); 
             digitalWrite(stepPin,LOW); 
-            delayMicroseconds(atoi(Rotating_speed)); 
+            delayMicroseconds(atoi(delaytime)); 
           }
           char sign = Serial.read();
           if (sign=='0'){
             digitalWrite(dirPin,LOW);
             memset(pulse, 0, 9);
-            memset(Rotating_speed, 0, 9);
+            memset(delaytime, 0, 9);
             Serial.println("Stop.........");
           }
         }

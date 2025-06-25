@@ -23,8 +23,8 @@ namespace SMC
     public class Parameter
     {
         public string Port_val { get; set; }
-        public string Pluse_val { get; set; }
-        public string Rotational_Speed_val { get; set; }
+        public string Pulses_Per_Revolution_val { get; set; }
+        public string Microseconds_Per_2_Pulses_val { get; set; }
     }
     
     public partial class MainWindow : Window
@@ -91,8 +91,8 @@ namespace SMC
         private void LoadConfig()
         {
             List<Parameter> Parameter_info = Config.Load();
-            Pluse.Text = Parameter_info[0].Pluse_val;
-            Rotational_Speed.Text = Parameter_info[0].Rotational_Speed_val;
+            Pulses_Per_Revolution.Text = Parameter_info[0].Pulses_Per_Revolution_val;
+            Microseconds_Per_2_Pulses.Text = Parameter_info[0].Microseconds_Per_2_Pulses_val;
             Port.Text = Parameter_info[0].Port_val;
         }
 
@@ -100,8 +100,8 @@ namespace SMC
         {
             List<Parameter> Parameter_config = new List<Parameter>()
                         {
-                            new Parameter() {Pluse_val=Pluse.Text,
-                                             Rotational_Speed_val=Rotational_Speed.Text,
+                            new Parameter() {Pulses_Per_Revolution_val=Pulses_Per_Revolution.Text,
+                                             Microseconds_Per_2_Pulses_val=Microseconds_Per_2_Pulses.Text,
                                              Port_val = Port.Text
                                              }
                         };
@@ -156,9 +156,9 @@ namespace SMC
                 case nameof(Rotate):
                     {
                         sp.WriteLine("1");
-                        sp.WriteLine(Pluse.Text);
-                        sp.Write(Rotational_Speed.Text);
-                        sp.Write(Rotational_Speed.Text);
+                        sp.WriteLine(Pulses_Per_Revolution.Text);
+                        sp.Write(Microseconds_Per_2_Pulses.Text);
+                        sp.Write(Microseconds_Per_2_Pulses.Text);
                         Rotate_Led.LightColor = System.Windows.Media.Color.FromRgb(0, 255, 0);
                         Logger.WriteLog("開始轉動!", 1, richTextBoxGeneral);
                         break;

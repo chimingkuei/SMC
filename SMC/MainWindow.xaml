@@ -45,10 +45,10 @@
                     <WrapPanel Orientation="Horizontal" Margin="647,91,17,65">
                         <Label x:Name="Port_Label" Content="Port" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="40" FontSize="20" Margin="20,40,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                         <TextBox x:Name="Port" HorizontalAlignment="Left" Margin="25,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" Height="37" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                        <Label x:Name="Rotational_Speed_Label" Content="ms/2rev" Width="100" Height="40" FontSize="20" Margin="20,40,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                        <xctk:IntegerUpDown x:Name="Rotational_Speed" Increment="1" TextAlignment="Center" FontSize="20" Width="130" Height="40" Margin="25,40,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                        <Label x:Name="Pluse_Label" Content="pluse/rev" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="40" FontSize="20" Margin="20,40,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                        <ComboBox x:Name="Pluse" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="40" FontSize="20" Margin="25,40,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                        <Label x:Name="Microseconds_Per_2_Pulses_Label" Content="us/2pluse" Width="100" Height="40" FontSize="20" Margin="20,40,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                        <xctk:IntegerUpDown x:Name="Microseconds_Per_2_Pulses" Increment="1" TextAlignment="Center" FontSize="20" Width="130" Height="40" Margin="25,40,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                        <Label x:Name="Pulses_Per_Revolution_Label" Content="pluse/rev" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="40" FontSize="20" Margin="20,40,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                        <ComboBox x:Name="Pulses_Per_Revolution" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Height="40" FontSize="20" Margin="25,40,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
                             <ComboBoxItem IsSelected="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">200</ComboBoxItem>
                             <ComboBoxItem HorizontalContentAlignment="Center" VerticalContentAlignment="Center">1600</ComboBoxItem>
                             <ComboBoxItem HorizontalContentAlignment="Center" VerticalContentAlignment="Center">3200</ComboBoxItem>
